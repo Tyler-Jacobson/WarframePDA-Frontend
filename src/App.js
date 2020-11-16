@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import react, { useEffect, useState} from "react";
+import './styles/App.css';
+import dummyData from "./dummyData";
+
+import WarframeCard from "./Components/WarframeCard";
+
 
 function App() {
+
+  const [ framesData, setFramesData ] = useState([]);
+
+  // for debugging
+  console.log(dummyData);
+
+  const fetchData = function() {
+    // axios call for main data here
+    setFramesData(dummyData)// will be res.data
+  }
+
+  useEffect(() => {
+    fetchData();
+  })
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        dummyData.map(iter => {
+          return (
+            <WarframeCard frameData={iter} />
+          )
+        })
+      }
     </div>
   );
 }
