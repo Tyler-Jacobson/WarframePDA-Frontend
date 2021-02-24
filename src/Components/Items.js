@@ -1,5 +1,5 @@
 import { useEffect, useState} from "react";
-import '../styles/Home.css';
+import '../styles/Items.css';
 import axios from "axios";
 
 // ▲ ▼
@@ -200,8 +200,9 @@ const Items = function() {
     return (
         <div className="home">
             <button className="refresh-button" onClick={fetchData}>Refresh</button>
-            {/* render items */}
+            
             {
+                // renders items
                 renderData()
             }  
         </div>
