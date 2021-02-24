@@ -159,7 +159,9 @@ const Home = function() {
                             <div className="item" key={item.itemid}>
                                 <div className="leftbox">
                                     <p className="item-name">{item.itemname}</p>
-                                    {/* image will be here */}
+                                    <div className="image-container">
+                                        <img className="item-image" src={item.imageurl} alt={item.itemname} />
+                                    </div>
                                 </div> 
 
                                 <div className="rightbox">
