@@ -1,0 +1,63 @@
+.nav-spacing {
+    width: 100%;
+    margin-bottom: 4.5rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    min-height: 4.5rem;
+    background-color: rgba(101, 123, 151, 0.952);
+    box-shadow: 0 0 4px rgb(94, 94, 94);
+}
+
+.nav-logo {
+    margin-left: 1rem;
+}
+
+.right-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    color: whitesmoke;
+    border: 2px solid rgb(28, 2, 63);
+    background-color: rgba(87, 86, 170, 0.514);
+    box-shadow: 0 0 10px rgb(129, 103, 202);
+    padding: 0.5rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    min-height: 2rem;
+    
+}
+
+.nav-link-large {
+    width: 19%;
+}
+
+@keyframes example {
+    from {font-size: 1.2rem; box-shadow: 0 0 10px rgb(129, 103, 202);}
+    to {font-size: 1.3rem; box-shadow: 0 0 10px rgb(255, 255, 255);}
+}
+
+.nav-link:hover {
+    font-size: 1.3rem;
+    animation-name: example;
+    animation-duration: 0.4s;
+    color: whitesmoke;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    border: 2px solid rgb(28, 2, 63);
+}
+
