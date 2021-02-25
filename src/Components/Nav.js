@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-
 import '../styles/Nav.css';
+
+import logo from "../assets/logo.png"
 
 // Logo
 
@@ -16,7 +17,12 @@ const Nav = function() {
     return (
         <div className="nav-spacing">
             <div className="nav">
-                <Link className="nav-logo" to="/">Logo</Link>
+                <Link className="logo-link-wrapper" to="/">
+                    <div className="nav-logo-container">
+                        <img className="nav-logo" src={logo} alt="logo"/>
+                        <p className="nav-logo-text" to="/">WarframePDA</p>
+                    </div>
+                </Link>
                 <div className="right-nav">
                     <Link className="nav-link" to="/">Home</Link>
                     <Link className="nav-link" to="/items">Warframes</Link>

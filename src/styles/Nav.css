@@ -14,8 +14,24 @@
     background-color: rgba(101, 123, 151, 0.952);
     box-shadow: 0 0 4px rgb(94, 94, 94);
 }
+.logo-link-wrapper {
+    /* display: block; allows for the <Link> which this style is applied to, to properly wrap a <div> */
+    display: block;
+    color: rgb(26, 26, 26);
+}
+
+.nav-logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
 
 .nav-logo {
+
+}
+
+.nav-logo-text{
+    font-size: 2.4rem;
     margin-left: 1rem;
 }
 
