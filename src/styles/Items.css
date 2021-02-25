@@ -7,8 +7,6 @@
     
 }
 
-
-
 .refresh-button {
     width: 2rem;
     height: auto;
@@ -44,7 +42,7 @@
     justify-content: space-between;
     margin-bottom: 2rem;
 
-    background-color: rgba(151, 184, 197, 0.582);
+    background-color: rgba(167, 186, 194, 0.582);
     border-radius: 5px;
     padding: 0.5rem;
     box-shadow: 0 0 4px rgb(131, 131, 131);
