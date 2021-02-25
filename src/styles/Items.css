@@ -1,5 +1,32 @@
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 60%;
+    min-height: 4rem;
+    
+}
+
+
+
 .refresh-button {
-    margin: 0.6rem;
+    width: 2rem;
+    height: auto;
+    border: 1px dashed rgb(66, 66, 66);
+    border-radius: 100%;
+    padding: 0.2rem;
+    background-color: rgba(151, 184, 197, 0.582);
+    cursor: pointer;
+    
+}
+
+.refresh-button:hover {
+    background-color: rgba(133, 161, 172, 0.582);
+}
+
+.loading {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(360deg);
 }
 
 .home {

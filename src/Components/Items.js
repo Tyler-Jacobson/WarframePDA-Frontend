@@ -2,6 +2,8 @@ import { useEffect, useState} from "react";
 import '../styles/Items.css';
 import axios from "axios";
 
+import test from"../assets/refresh.png"
+
 // ▲ ▼
 
 const defaultItemsData = []
@@ -10,11 +12,14 @@ const Items = function() {
 
     const [ itemsData, setItemsData ] = useState(defaultItemsData);
 
+    const [ loading, setLoading ] = useState(false);
+
     // for debugging
     
   
     const fetchData = function() {
       setItemsData(defaultItemsData)
+      setLoading(true)
       axios.get("https://warframepda.herokuapp.com/items/all")
       .then((res) => {
         
@@ -23,6 +28,7 @@ const Items = function() {
         const arrayWithDataParams = addDataParameters(res.data)
         const arraySortedByProfit = sortByProfit(arrayWithDataParams)
         setItemsData(arraySortedByProfit)
+        setLoading(false)
         // console.log("returned from sortByProfit", arraySortedByProfit)
 
       })
@@ -150,7 +156,8 @@ const Items = function() {
         return (
             <div className="home">
                 {
-                    itemsData === defaultItemsData ? 
+                    
+                    loading === true ?
                     <p>Loading...</p>
                         :
                     // console.log(itemsData),
@@ -199,8 +206,9 @@ const Items = function() {
 
     return (
         <div className="home">
-            <button className="refresh-button" onClick={fetchData}>Refresh</button>
-            
+            <div className="button-container">
+                <img src={test} className={loading === true ? "loading refresh-button" : "refresh-button"} onClick={fetchData} alt="refresh button" />
+            </div>
             {
                 // renders items
                 renderData()
