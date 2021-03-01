@@ -26,7 +26,7 @@ const Nav = function() {
                 <div className="right-nav">
                     <Link className="nav-link" to="/">Home</Link>
                     <Link className="nav-link" to="/items">Warframes</Link>
-                    <Link className="nav-link nav-link-large" to="/about">About This Project</Link>
+                    <Link className="nav-link nav-link-large" to="/about">How It Works</Link>
                     <a  className="nav-link"
                         href="mailto:TylerJacobsonSE@gmail.com"
                         target="_blank"

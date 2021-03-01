@@ -1,10 +1,11 @@
+
 import '../styles/Home.css';
 
 
 
 const contentArray = [
     {
-        header: "How it works:",
+        header: "The Idea:",
         body: "Items bought and sold through Warframe.market can potentially turn a profit for the savvy trader. This can be done by buying individual components of an item, and then selling the item as a full set, netting a profit in the process.",
         side: "left"
     },
