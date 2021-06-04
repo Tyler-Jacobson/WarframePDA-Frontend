@@ -1,4 +1,4 @@
-# Warframe-Frontend
+# WarframePDA-Frontend
 
 Backend:
 https://github.com/Tyler-Jacobson/WarframePDA-Backend
