@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-image: url(../assets/background.png);
-	min-height: 100vh;
+	/* background-image: url(../assets/background.png); */
+	/* height: 100vh; */
 }
 
