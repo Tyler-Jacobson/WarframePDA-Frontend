@@ -8,16 +8,17 @@ const useBlurUp = (sourcesArray) => {
         setSrc(sourcesArray[0]);
 
         for (let i = 0; i < sourcesArray.length; i++) {
+            const mul = i
 
             const image = new Image();
             image.src = sourcesArray[i];
 
             image.onload = async () => {
-                await new Promise(r => setTimeout(r, i * 10));
+                await new Promise(r => setTimeout(r, mul * 10));
                 setSrc(sourcesArray[i])
             }
         }
-    }, sourcesArray)
+    }, sourcesArray) // eslint-disable-line
 
     return [src]
 };
