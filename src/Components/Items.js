@@ -39,6 +39,70 @@ const Items = function() {
 
     useEffect(() => {
       fetchData();
+
+        let p1 = new Promise((resolve, reject) => {
+            resolve("foo");
+        });
+        let p2 = new Promise((resolve, reject) => {
+            reject("bar");
+        });
+
+        console.log("bip");
+
+        p1.then(val => {
+            console.log(val)
+            return p2;
+        })
+        .then(val => {
+            console.log("baz")
+        })
+        .catch(err => {
+            console.log(err)
+        })
+
+        console.log("bop")
+
+
+
+
+        class MyList extends Array {
+            constructor(someArg) {
+                super()
+                this.someArg = [...someArg]
+
+            }
+        }
+
+        let theList = new MyList("foo");
+
+
+        function foo(obj) {
+            return {
+                a: obj.bar,
+                b: obj.baz
+            }
+        }
+
+        const { a } = foo({ bar: 27, baz: 41 })
+
+        console.log(a)
+
+        for (var i = 0; i < 5; i++) {
+            setTimeout(function() {
+                console.log(i);
+            }, 0);
+        }
+
+        let z = 3
+        let j = 4
+        let k = 1
+        for (z = 0; z < 3; z++) {
+            k += j
+            j = j - 1
+        }
+        console.log("k", k)
+
+
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
